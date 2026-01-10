@@ -1,0 +1,71 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin: 0; padding: 2rem; background:#f7f7fb; color:#111; }
+header h1 { margin: 0 0 1rem 0; font-size: 1.4rem; }
+
+#app {  background: white; padding: 1.25rem; border-radius: 8px; max-width: 420px; box-shadow: 0 6px 18px rgba(16,24,40,0.06); }
+
+
+button { align-self: end ; background:#2563eb; color:white; border:none; padding:0.5rem 0.75rem; border-radius:6px; cursor:pointer; }
+button:hover:not(:disabled) { background:#1e40af; }
+button:disabled { background:#9ca3af; cursor:not-allowed; opacity:0.95; }
+#message { display: flex; flex-direction: column;  color:#374151; }
+
+
+#advice {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-style: italic;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 65px;
+  aspect-ratio: 1;
+  position: relative;
+  margin: 10px auto;
+  display: none;
+  
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  box-shadow: 0 0 0 3px inset #333;
+  animation: l4 2.5s infinite;
+}
+.loader:after {
+  animation-delay: -1.25s;
+}
+@keyframes l4 {
+  0% {
+    inset: 0 35px 35px 0;
+  }
+  12.5% {
+    inset: 0 35px 0 0;
+  }
+  25% {
+    inset: 35px 35px 0 0;
+  }
+  37.5% {
+    inset: 35px 0 0 0;
+  }
+  50% {
+    inset: 35px 0 0 35px;
+  }
+  62.5% {
+    inset: 0 0 0 35px;
+  }
+  75% {
+    inset: 0 0 35px 35px;
+  }
+  87.5% {
+    inset: 0 0 35px 0;
+  }
+  100% {
+    inset: 0 35px 35px 0;
+  }
+}
